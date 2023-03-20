@@ -11,14 +11,14 @@ from .permissions import IfUserEmployee
 
 
 class ParticipantCreateView(CreateAPIView):
-    """Создать участника"""
+    """Создаем участника"""
     model = Participant
     permission_classes = [IsAuthenticated, IfUserEmployee]
     serializer_class = ParticipantCreateSerializer
 
 
 class ParticipantListView(ListAPIView):
-    """Показать список всех участников"""
+    """Показываем список всех участников"""
     queryset = Participant.objects.all()
     permission_classes = [IsAuthenticated, IfUserEmployee]
     pagination_class = LimitOffsetPagination
@@ -43,14 +43,14 @@ class ParticipantView(RetrieveUpdateDestroyAPIView):
 
 
 class SupplierCreateView(CreateAPIView):
-    """Создать поставщика"""
+    """Создаем поставщика"""
     model = Supplier
     permission_classes = [IsAuthenticated, IfUserEmployee]
     serializer_class = SupplierCreateSerializer
 
 
 class SupplierListView(ListAPIView):
-    """Показать список всех поставщиков"""
+    """Показываем список всех поставщиков"""
     queryset = Supplier.objects.all()
     permission_classes = [IsAuthenticated, IfUserEmployee]
     pagination_class = LimitOffsetPagination
