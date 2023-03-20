@@ -3,6 +3,7 @@
 import os
 import sys
 
+#пропишем основу для запуска нашего приложения
 
 def main():
     """Run administrative tasks."""
